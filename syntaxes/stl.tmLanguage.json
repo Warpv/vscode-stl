@@ -10,6 +10,16 @@
 		},
 		{
 			"include": "#comments"
+		},
+		{
+			"include": "#numerics"
+		},
+		{
+			"include": "#storage"
+		},
+		{
+			"name": "variable.name.labels.stl",
+			"match": "^\\%*.*:"
 		}
 	],
 	"repository": {
@@ -41,6 +51,37 @@
 					"end": "\\*/"
 				}
 			]
+		},
+		"numerics": {
+			"patterns": [
+				{
+					"name": "constant.numeric.dec.stl",
+					"match": "#?-?[0-9\\.]+\\b"
+				},
+				{
+					"name": "constant.numeric.hex.stl",
+					"match": "#-?0x[0-9a-fA-F]+\\b"
+				},
+				{
+					"name": "constant.character.stl",
+					"match": "#?\\'\\\\?.\\'"
+				},
+				{
+					"name": "constant.other.stl",
+					"match": "#\\(.*\\)"
+				}
+			]
+		},
+		"variable": {
+			"patterns": [{
+				"name": "variable.name.labels.stl",
+				"match": "\\%*.*"
+				}
+			]
+		},
+		"storage": {
+			"name": "storage.datablocks.stl",
+			"match": "\\b(OPN|CDB|L DBLG|L DBNO|L DILG|L sDINO)\\b"
 		}
 	},
 	"scopeName": "source.stl"
