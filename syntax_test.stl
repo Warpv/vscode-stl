@@ -1,0 +1,24 @@
+A
+(
+O "Tag_1"
+ON "Tag_2"
+)
+
+LOOP 
+
+
+NOP 0
+
+ATAN 
+ACOS 
+
+R 
+L "Tag_1"
+T "Tag_2"
+
+S5Time#
+
+
+
+
+
