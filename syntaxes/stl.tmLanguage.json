@@ -3,357 +3,44 @@
 	"name": "Statement List",
 	"patterns": [
 		{
-			"include": "#comments"
+			"include": "#keywords"
 		},
 		{
 			"include": "#strings"
 		},
-        {
-            "include": "#operators"
-        },
 		{
-			"include": "#functions"
-		},
-		{
-			"include": "#meta"
-		},
-		{
-			"include": "#numbers"
-		},
-		{
-			"include": "#variables"
-		},
-		{
-			"include": "#keywords"
+			"include": "#comments"
 		}
 	],
 	"repository": {
-		"numbers": {
-			"patterns": [
-				{
-					"name": "constant.numeric.integer.stl",
-					"match": "\\b(2#[0-9\\_]+)\\b"
-				},
-				{
-					"name": "constant.numeric.hex.stl",
-					"match": "\\b(16#[0-9A-Fa-f\\_]+)\\b"
-				},
-				{
-					"name": "constant.numeric.integer.stl",
-					"match": "\\b(8#[0-9\\_]+)\\b"
-				},
-				{
-					"name": "constant.numeric.float.stl",
-					"match": "\\b\\d*\\.\\d+([eE][\\-+]?\\d+)?\\b"
-				},
-				{
-					"name": "constant.numeric.integer.stl",
-					"match": "\\b(\\d)+\\b"
-				},
-				{
-					"name": "constant.numeric.integer.stl",
-					"match": "\\b(BYTE|(?:D|L)?WORD|U?(?:S|D|L)?INT)#(2|8)#[0-9\\_]+\\b"
-				},
-				{
-					"name": "constant.numeric.integer.stl",
-					"match": "\\b(BYTE|(?:D|L)?WORD|U?(?:S|D|L)?INT)#16#[a-fA-F0-9\\_]+\\b"
-				},
-				{
-					"name": "constant.numeric.integer.stl",
-					"match": "\\b(BYTE|(?:D|L)?WORD|U?(?:S|D|L)?INT)#-?[0-9\\_]+\\b"
-				},
-				{
-					"name": "constant.numeric.float.stl",
-					"match": "\\b(L?REAL)#-?\\d*\\.\\d+([eE][\\-+]?\\d+)?\\b"
-				}
-			]
-		},
-
-		"operators": {
-			"patterns": [
-				{
-					"name": "keyword.operator.range.stl",
-					"match": "(?<!\\.)\\.\\.(?!\\.)"
-				},
-				{
-					"name": "keyword.operator.assignment.stl",
-					"match": "(=|==I|==R|==D)"
-				},
-				{
-					"name": "keyword.operator.content.stl",
-					"match": "\\^|MOVE"
-				},
-				{
-					"name": "keyword.operator.logical.stl",
-					"match": "\\b(A|AN|O|ON|X|XN|FN|FP|R|S|NOT|SET|CLR|SAVE)\\b|&"
-				},
-				{
-					"name": "keyword.operator.comparison.stl",
-					"match": "(?:<>|<|=|>|<=|>=)"
-				},
-				{
-					"name": "keyword.operator.arithmetic.stl",
-					"match": "(?:\\+|\\-|\\/|\\*|MOD|\\+I|\\+R|\\+D|\\-I|\\-R|\\-D|\\*I|\\*R|\\*D|\\/I|\\/R|\\/D)"
-				},
-				{
-					"name": "keyword.operator.arithmetic.stl",
-					"match": "\\b(?:ABS|SIN|ABS|ACOS|ASIN|ATAN|COS|EXP|LN|SIN|SQRT|TAN|SQR)?)(?=\\()"
-				},
-				{
-					"name": "keyword.operator.arithmetic.stl",
-					"match": "\\b()[A-Za-z]*\\b"
-				}
-			]
-		},
 		"keywords": {
-			"patterns": [
-				{
-					"name": "storage.type.class.stl",
-					"match": "\\b(OPN|CDB|L?DBLG|L?DBNO|L?DILG|L?DINO)\\b"
-				},
-				{
-					"name": "punctuation.terminator.statement.stl",
-					"match": "[;]"
-				},
-				{
-					"name": "constant.language.stl",
-					"match": "\\b(NULL)\\b"
-				},
-				{
-					"name": "variable.parameter.stl",
-					"match": "(?<=\\.)[A-Za-z_](?:[0-9A-Za-z_])*\\b",
-					"comment": "Parameter or an object"
-				},
-				{
-					"name": "support.type.primitives.stl",
-					"match": "\\b(I|R|D)\\b"
-				},
-				{
-					"name": "invalid.stl",
-					"match": "#"
-				},
-				{
-					"name": "variable.name.stl",
-					"match": "\\b([a-zA-Z0-9_]+)\\b"
-				}
-			]
+			"patterns": [{
+				"name": "keyword.control.stl",
+				"match": "\\b(A|AN|O|ON|X)\\b"
+			}]
 		},
-		"variables": {
+		"strings": {
+			"name": "string.quoted.double.stl",
+			"begin": "\"",
+			"end": "\"",
 			"patterns": [
 				{
-					"name": "variable.other.constant",
-					"match": "\\b[A-Za-z]{1,6}#[a-zA-Z0-9\\_]+\\b"
-				},
-				{
-					"name": "variable.other.constant",
-					"match": "\\%(I|R|D)[0-9\\.]+\\b"
-				}
-			]
-		},
-		"meta": {
-			"patterns": [
-				{
-					"name": "meta.expression.stl",
-					"begin": "[^a-zA-Z_0-9]+\\((?!\\*)",
-					"beginCaptures": {
-						"0": {
-							"name": "punctuation.parenthesis.begin.stl"
-						}
-					},
-					"end": "\\)",
-					"endCaptures": {
-						"0": {
-							"name": "punctuation.parenthesis.end.stl"
-						}
-					},
-					"patterns": [
-						{
-							"include": "$self"
-						}
-					]
-				},
-				{
-					"name": "meta.index.stl",
-					"begin": "\\[",
-					"beginCaptures": {
-						"0": {
-							"name": "punctuation.bracket.begin.stl"
-						}
-					},
-					"end": "\\]",
-					"endCaptures": {
-						"0": {
-							"name": "punctuation.bracket.end.stl"
-						}
-					},
-					"patterns": [
-						{
-							"include": "$self"
-						}
-					]
-				},
-				{
-					"name": "comment.block.stl",
-					"begin": "\\{",
-					"beginCaptures": {
-						"0": {
-							"name": "punctuation.brace.begin.stl"
-						}
-					},
-					"end": "\\}",
-					"endCaptures": {
-						"0": {
-							"name": "punctuation.brace.end.stl"
-						}
-					},
-					"patterns": [
-						{
-							"match": "(attribute|text|info|warning) *('[^']+')(?: *(:=)? * ('[^']+')?)?",
-							"captures": {
-								"1": {
-									"name": "variable.parameter.stl"
-								},
-								"3": {
-									"name": "keyword.operator.assignment.stl"
-								},
-								"2": {
-									"name": "string.quoted.single.stl"
-								},
-								"4": {
-									"name": "string.quoted.single.stl"
-								}
-							}
-						}
-					]
+					"name": "constant.character.escape.stl",
+					"match": "\\\\."
 				}
 			]
 		},
 		"comments": {
-			"patterns": [
-				{
-					"include": "#comment_l"
+			"patterns": [{
+					"name": "comment.stl",
+					"match": "//.*$"
 				},
 				{
-					"include": "#comment_stl"
-				},
-				{
-					"include": "#comment_g"
-				}
-			],
-			"repository": {
-				"comment_l": {
-					"name": "comment.line.double-slash.stl",
-					"begin": "\\/\\/",
-					"end": "$",
-					"patterns": [
-						{
-							"include": "#todo"
-						},
-						{
-							"name": "constant.character.escape.stl",
-							"match": "\\\\."
-						}
-					]
-				},
-				"comment_stl": {
 					"name": "comment.block.stl",
-					"begin": "\\(\\*",
-					"end": "\\*\\)",
-					"patterns": [
-						{
-							"include": "#todo"
-						},
-						{
-							"include": "#comment_stl"
-						},
-						{
-							"match": "(@[A-Z_]+) *(:=) * ('[\\d\\w\\W ]*')",
-							"captures": {
-								"1": {
-									"name": "variable.parameter.stl"
-								},
-								"2": {
-									"name": "keyword.operator.assignment.stl"
-								},
-								"3": {
-									"name": "string.quoted.single.stl"
-								}
-							}
-						}
-					]
-				},
-				"comment_g": {
-					"name": "comment.block.stl",
-					"begin": "\\/\\*",
-					"end": "\\*\\/",
-					"patterns": [
-						{
-							"include": "#todo"
-						},
-                        {
-							"include": "#comment_g"
-						},
-						{
-							"_name": "constant.character.escape.stl",
-							"_match": "\\\\."
-						}
-					]
-				},
-				"todo": {
-					"match": "\\b(?:TODO(:)?\\s)",
-					"name": "markup.bold keyword.todo.stl"
+					"begin": "/\\*",
+					"end": "\\*/"
 				}
-			}
-		},
-		"strings": {
-			"patterns": [
-				{
-					"name": "string.quoted.single.stl",
-					"begin": "'",
-					"beginCaptures": {
-						"0": {
-							"name": "punctuation.single.begin.stl"
-						}
-					},
-					"end": "'",
-					"endCaptures": {
-						"0": {
-							"name": "punctuation.single.end.stl"
-						}
-					},
-					"patterns": [
-						{
-							"include": "#escape"
-						}
-					]
-				},
-				{
-					"name": "string.quoted.single.stl",
-					"begin": "\\b(W?STRING)#(')",
-					"beginCaptures": {
-						"2": {
-							"name": "punctuation.single.begin.stl"
-						}
-					},
-					"end": "'",
-					"endCaptures": {
-						"0": {
-							"name": "punctuation.single.end.stl"
-						}
-					},
-					"patterns": [
-						{
-							"include": "#escape"
-						}
-					]
-				}
-			],
-			"repository": {
-				"escape": {
-					"name": "constant.character.escape.stl",
-					"match": "\\$(\\$|'|\"|N|L|R|T|nnnn|nn)"
-				}
-			}
+			]
 		}
 	},
 	"scopeName": "source.stl"
