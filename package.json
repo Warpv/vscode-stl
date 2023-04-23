@@ -57,23 +57,23 @@
         "path": "./syntaxes/stl.tmLanguage.json"
       },
       {
-        "scopeName": "markdown.iecst.codeblock",
+        "scopeName": "markdown.iecstl.codeblock",
         "path": "./syntaxes/md.codeblock.json",
         "injectTo": [
             "text.html.markdown"
           ],
         "embeddedLanguages": {
-          "meta.embedded.block.iecstmd": "stl"
+          "meta.embedded.block.iecstlmd": "stl"
           }
       },
       {
-        "scopeName": "xml.iecst.codeblock",
+        "scopeName": "xml.iecstl.codeblock",
         "path": "./syntaxes/xml.codeblock.json",
         "injectTo": [
             "text.xml"
           ],
         "embeddedLanguages": {
-            "meta.embedded.block.iecstxml": "stl"
+            "meta.embedded.block.iecstlxml": "stl"
           }
       }
     ],
