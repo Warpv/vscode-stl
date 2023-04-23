@@ -3,9 +3,6 @@
 	"name": "Statement List",
 	"patterns": [
 		{
-			"include": "#system"
-		},
-		{
 			"include": "#comments"
 		},
 		{
@@ -31,50 +28,6 @@
 		}
 	],
 	"repository": {
-		"system": {
-			"patterns": [
-				{
-					"match": "\\n",
-					"name": "meta.ending-space"
-				},
-				{
-					"begin": "^(?=\\t)",
-					"end": "(?=[^\\t])",
-					"name": "meta.leading-space",
-					"patterns": [
-						{
-							"match": "(\\t)(\\t)?",
-							"captures": {
-								"1": {
-									"name": "meta.odd-tab.tabs"
-								},
-								"2": {
-									"name": "meta.even-tab.tabs"
-								}
-							}
-						}
-					]
-				},
-				{
-					"begin": "^(?= )",
-					"end": "(?=[^ ])",
-					"name": "meta.leading-space",
-					"patterns": [
-						{
-							"match": "(  )(  )?",
-							"captures": {
-								"1": {
-									"name": "meta.odd-tab.spaces"
-								},
-								"2": {
-									"name": "meta.even-tab.spaces"
-								}
-							}
-						}
-					]
-				}
-			]
-		},
 		"numbers": {
 			"patterns": [
 				{
@@ -96,6 +49,22 @@
 				{
 					"name": "constant.numeric.integer.stl",
 					"match": "\\b(\\d)+\\b"
+				},
+				{
+					"name": "constant.numeric.integer.stl",
+					"match": "\\b(BYTE|(?:D|L)?WORD|U?(?:S|D|L)?INT)#(2|8)#[0-9\\_]+\\b"
+				},
+				{
+					"name": "constant.numeric.integer.stl",
+					"match": "\\b(BYTE|(?:D|L)?WORD|U?(?:S|D|L)?INT)#16#[a-fA-F0-9\\_]+\\b"
+				},
+				{
+					"name": "constant.numeric.integer.stl",
+					"match": "\\b(BYTE|(?:D|L)?WORD|U?(?:S|D|L)?INT)#-?[0-9\\_]+\\b"
+				},
+				{
+					"name": "constant.numeric.float.stl",
+					"match": "\\b(L?REAL)#-?\\d*\\.\\d+([eE][\\-+]?\\d+)?\\b"
 				}
 			]
 		},
@@ -140,7 +109,7 @@
 			"patterns": [
 				{
 					"name": "storage.type.class.stl",
-					"match": "\\b(OPN|CDB|L DBLG|L DBNO|L DILG|L DINO)\\b"
+					"match": "\\b(OPN|CDB|L?DBLG|L?DBNO|L?DILG|L?DINO)\\b"
 				},
 				{
 					"name": "punctuation.terminator.statement.stl",

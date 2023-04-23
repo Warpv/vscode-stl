@@ -3,12 +3,12 @@
     "injectionSelector": "L:text.html.markdown",
     "patterns": [
         {
-            "include": "#iecst-code-block"
+            "include": "#iecstl-code-block"
         }
     ],
     "repository": {
-        "iecst-code-block": {
-            "begin": "(^|\\G)(\\s*)(\\`{3,}|~{3,})\\s*(?i:(iecst)(\\s+[^`~]*)?$)",
+        "iecstl-code-block": {
+            "begin": "(^|\\G)(\\s*)(\\`{3,}|~{3,})\\s*(?i:(iecstl)(\\s+[^`~]*)?$)",
             "name": "markup.fenced_code.block.markdown",
             "end": "(^|\\G)(\\2|\\s{0,3})(\\3)\\s*$",
             "beginCaptures": {
@@ -31,7 +31,7 @@
                 {
                     "begin": "(^|\\G)(\\s*)(.*)",
                     "while": "(^|\\G)(?!\\s*([`~]{3,})\\s*$)",
-                    "contentName": "meta.embedded.block.iecstmd",
+                    "contentName": "meta.embedded.block.iecstlmd",
                     "patterns": [
                         {
                             "include": "source.st"
@@ -41,5 +41,5 @@
             ]
         }
     },
-    "scopeName": "markdown.iecst.codeblock"
+    "scopeName": "markdown.iecstl.codeblock"
 }
