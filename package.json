@@ -2,7 +2,7 @@
   "name": "vscode-stl",
   "displayName": "vscode_stl",
   "description": "STL snippies and highlight",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "publisher": "NIKOinc",
   "engines": {
     "vscode": "^1.77.0"
@@ -43,9 +43,9 @@
             "Statement List",
             "STL"
           ],
-        "firstLine": "^([\\(\\/\\*]?.*)?(PROGRAM ).*",
         "extensions": [
-            ".stl"
+            ".stl",
+            ".s"
           ],
         "configuration": "./language-configuration.json"
       }
