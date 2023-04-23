@@ -1,6 +1,6 @@
 {
-  "name": "vscode-stl",
-  "displayName": "vscode_stl",
+  "name": "vscode_stl",
+  "displayName": "Statement List (STL)",
   "description": "STL snippies and highlight",
   "version": "1.0.0",
   "publisher": "NIKOinc",
@@ -14,7 +14,7 @@
   ],
   "repository": {
       "type": "git",
-      "url": "https://github.com/nikoincc/vscode-stl.git"
+      "url": "https://github.com/NIKOinc/vscode-stl.git"
   },
   "keywords": [
     "STL",

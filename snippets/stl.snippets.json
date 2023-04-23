@@ -1,0 +1,1010 @@
+{
+    "A": {
+		"prefix": "A",
+		"body": [
+			"A $1"
+		],
+		"description": "And"
+    },
+    "AN": {
+		"prefix": "AN",
+		"body": [
+			"A $1"
+		],
+		"description": "And Not"
+    },
+    "O": {
+		"prefix": "O",
+		"body": [
+			"O $1"
+		],
+		"description": "Or"
+    },
+    "ON": {
+		"prefix": "ON",
+		"body": [
+			"ON $1"
+		],
+		"description": "Or Not"
+    },
+    "X": {
+		"prefix": "X",
+		"body": [
+			"X $1"
+		],
+		"description": "Exclusive Or"
+    },
+    "XN": {
+		"prefix": "XN",
+		"body": [
+			"XN $1"
+		],
+		"description": "Exclusive Or Not"
+    },
+    "FN": {
+		"prefix": "FN",
+		"body": [
+			"FN $1"
+		],
+		"description": "Edge Negative"
+    },
+    "FP": {
+		"prefix": "FP",
+		"body": [
+			"FP $1"
+		],
+		"description": "Edge Positive"
+    },
+    "R": {
+		"prefix": "R",
+		"body": [
+			"R $1"
+		],
+		"description": "Reset"
+    },
+    "S": {
+		"prefix": "S",
+		"body": [
+			"S $1"
+		],
+		"description": "Set"
+    },
+    "NOT": {
+		"prefix": "NOT",
+		"body": [
+			"NOT $1"
+		],
+		"description": "Negate RLO"
+    },
+    "SET": {
+		"prefix": "SET",
+		"body": [
+			"SET $1"
+		],
+		"description": "Set RLO (=1)"
+    },
+    "CLR": {
+		"prefix": "CLR",
+		"body": [
+			"CLR $1"
+		],
+		"description": "Clear RLO (=O)"
+    },
+    "SAVE": {
+		"prefix": "SAVE",
+		"body": [
+			"SAVE $1"
+		],
+		"description": "Save RLO in BR Register"
+    },
+    "BTI": {
+		"prefix": "BTI",
+		"body": [
+			"BTI $1"
+		],
+		"description": "BCD to Integer"
+    },
+    "ITB": {
+		"prefix": "ITB",
+		"body": [
+			"ITB $1"
+		],
+		"description": "Integer to BCD"
+    },
+    "BTD": {
+		"prefix": "BTD",
+		"body": [
+			"BTD $1"
+		],
+		"description": "BCD to Integer"
+    },
+    "ITD": {
+		"prefix": "ITD",
+		"body": [
+			"ITD $1"
+		],
+		"description": "Integer to Double Integer"
+    },
+    "DTB": {
+		"prefix": "DTB",
+		"body": [
+			"DTB $1"
+		],
+		"description": "Double Integer to BCD"
+    },
+    "DTR": {
+		"prefix": "DTR",
+		"body": [
+			"DTR $1"
+		],
+		"description": "Double Integer to Floating-Point"
+    },
+    "INVI": {
+		"prefix": "INVI",
+		"body": [
+			"INVI $1"
+		],
+		"description": "Ones Complement Integer"
+    },
+    "INVD": {
+		"prefix": "INVD",
+		"body": [
+			"INVD $1"
+		],
+		"description": "Ones Complement Double Integer"
+    },
+    "NEGI": {
+		"prefix": "NEGI",
+		"body": [
+			"NEGI $1"
+		],
+		"description": "Twos Complement Integer"
+    },
+    "NEGD": {
+		"prefix": "NEGD",
+		"body": [
+			"NEGD $1"
+		],
+		"description": "Twos Complement Double Integer"
+    },
+    "NEGR": {
+		"prefix": "NEGR",
+		"body": [
+			"NEGR $1"
+		],
+		"description": "Negate Floating Point Number"
+    },
+    "CAW": {
+		"prefix": "CAW",
+		"body": [
+			"CAW $1"
+		],
+		"description": "Change Byte Sequence in ACC1 Word"
+    },
+    "CAD": {
+		"prefix": "CAD",
+		"body": [
+			"CAD $1"
+		],
+		"description": "Change Byte Sequence in ACC1 Double"
+    },
+    "RND": {
+		"prefix": "RND",
+		"body": [
+			"RND $1"
+		],
+		"description": "Round"
+    },
+    "TRUNC": {
+		"prefix": "TRUNC",
+		"body": [
+			"TRUNC $1"
+		],
+		"description": "Truncate"
+    },
+    "I": {
+		"prefix": "I",
+		"body": [
+			"I $1"
+		],
+		"description": "Integer (16 bit)"
+    },
+    "D": {
+		"prefix": "D",
+		"body": [
+			"D $1"
+		],
+		"description": "Double Integer (32 bit)"
+    },
+    "==": {
+		"prefix": "==",
+		"body": [
+			"== ${1|I,D,R|"
+		],
+		"description": "ACC2 is equal to ACC1"
+    },
+    "<>": {
+		"prefix": "<>",
+		"body": [
+			"<> ${1|I,D,R|"
+		],
+		"description": "ACC2 is not equal to ACC1"
+    },
+    ">": {
+		"prefix": ">",
+		"body": [
+			"> ${1|I,D,R|"
+		],
+		"description": "ACC2 is greater then to ACC1"
+    },
+    ">=": {
+		"prefix": ">=",
+		"body": [
+			">= ${1|I,D,R|"
+		],
+		"description": "ACC2 is greater then equal to ACC1"
+    },
+    "<": {
+		"prefix": "<",
+		"body": [
+			"< ${1|I,D,R|"
+		],
+		"description": "ACC2 is less then to ACC1"
+    },
+    "<=": {
+		"prefix": "<=",
+		"body": [
+			"<= ${1|I,D,R|"
+		],
+		"description": "ACC2 is less then equal to ACC1"
+    },
+    "+": {
+		"prefix": "+",
+		"body": [
+			"+ ${1|I,D,R|"
+		],
+		"description": "Add ACC1 and ACC2"
+    },
+    "-": {
+		"prefix": "-",
+		"body": [
+			"- ${1|I,D,R|"
+		],
+		"description": "Subtract ACC1 and ACC2"
+    },
+    "*": {
+		"prefix": "*",
+		"body": [
+			"* ${1|I,D,R|"
+		],
+		"description": "Multiply ACC1 and ACC2"
+    },
+    "/": {
+		"prefix": "/",
+		"body": [
+			"/ ${1|I,D,R|"
+		],
+		"description": "Divide ACC2 by ACC1"
+    },
+    "MOD": {
+		"prefix": "MOD",
+		"body": [
+			"MOD $1"
+		],
+		"description": "MOD"
+    },
+    "ABS": {
+		"prefix": "ABS",
+		"body": [
+			"ABS $1"
+		],
+		"description": "Absolute Value"
+    },
+    "ACOS": {
+		"prefix": "ACOS",
+		"body": [
+			"ACOS $1"
+		],
+		"description": "Arc Cosine"
+    },
+    "ASIN": {
+		"prefix": "ASIN",
+		"body": [
+			"ASIN $1"
+		],
+		"description": "Arc Sine"
+    },
+    "ATAN": {
+		"prefix": "ATAN",
+		"body": [
+			"ATAN $1"
+		],
+		"description": "Arc Tangent"
+    },
+    "COS": {
+		"prefix": "COS",
+		"body": [
+			"COS $1"
+		],
+		"description": "Cosine of Angles"
+    },
+    "EXP": {
+		"prefix": "EXP",
+		"body": [
+			"EXP $1"
+		],
+		"description": "Exponential Value"
+    },
+    "LN": {
+		"prefix": "LN",
+		"body": [
+			"LN $1"
+		],
+		"description": "Natural Logarithm"
+    },
+    "SIN": {
+		"prefix": "SIN",
+		"body": [
+			"SIN $1"
+		],
+		"description": "Sine of Angles"
+    },
+    "SQR": {
+		"prefix": "SQR",
+		"body": [
+			"SQR $1"
+		],
+		"description": "Square"
+    },
+    "SQRT": {
+		"prefix": "SQRT",
+		"body": [
+			"SQRT $1"
+		],
+		"description": "Square Root"
+    },
+    "TAN": {
+		"prefix": "TAN",
+		"body": [
+			"TAN $1"
+		],
+		"description": "Tangent of Angles"
+    },
+    "AW": {
+		"prefix": "AW",
+		"body": [
+			"AW $1"
+		],
+		"description": "AND Word"
+    },
+    "AD": {
+		"prefix": "AD",
+		"body": [
+			"AD $1"
+		],
+		"description": "AND Double Word"
+    },
+    "OW": {
+		"prefix": "OW",
+		"body": [
+			"OW $1"
+		],
+		"description": "OR Word"
+    },
+    "OD": {
+		"prefix": "OD",
+		"body": [
+			"OD $1"
+		],
+		"description": "OR Double Word"
+    },
+    "XOW": {
+		"prefix": "XOW",
+		"body": [
+			"XOW $1"
+		],
+		"description": "Exclusive Or Word"
+    },
+    "XOD": {
+		"prefix": "XOD",
+		"body": [
+			"XOD $1"
+		],
+		"description": "Exclusive Or Double Word"
+    },
+    "SSI": {
+		"prefix": "SSI",
+		"body": [
+			"SSI $1"
+		],
+		"description": "Shift Sign Integer"
+    },
+    "SSD": {
+		"prefix": "SSD",
+		"body": [
+			"SSD $1"
+		],
+		"description": "Shift Sign Double Integer"
+    },
+    "SLW": {
+		"prefix": "SLW",
+		"body": [
+			"SLW $1"
+		],
+		"description": "Shift Left Word"
+    },
+    "SRW": {
+		"prefix": "SRW",
+		"body": [
+			"SRW $1"
+		],
+		"description": "Shift Right Word"
+    },
+    "SLD": {
+		"prefix": "SLD",
+		"body": [
+			"SLD $1"
+		],
+		"description": "Shift Left Double Word"
+    },
+    "SRD": {
+		"prefix": "SRD",
+		"body": [
+			"SRD $1"
+		],
+		"description": "Shift Right Double Word"
+    },
+    "RLD": {
+		"prefix": "RLD",
+		"body": [
+			"RLD $1"
+		],
+		"description": "Rotate Left Double Word"
+    },
+    "RRD": {
+		"prefix": "RRD",
+		"body": [
+			"RRD $1"
+		],
+		"description": "Rotate Right Double Word"
+    },
+    "RLDA": {
+		"prefix": "RLDA",
+		"body": [
+			"RLDA $1"
+		],
+		"description": "Rotate ACC1 Left via CC 1"
+    },
+    "RRDA": {
+		"prefix": "RRDA",
+		"body": [
+			"RRDA $1"
+		],
+		"description": "Rotate ACC1 Right via CC 1"
+    },
+    "TAK": {
+		"prefix": "TAK",
+		"body": [
+			"TAK $1"
+		],
+		"description": "Toggle ACC1 with ACC2"
+    },
+    "POP": {
+		"prefix": "POP",
+		"body": [
+			"POP $1"
+		],
+		"description": "Pop accumulators"
+    },
+    "PUSH": {
+		"prefix": "PUSH",
+		"body": [
+			"PUSH $1"
+		],
+		"description": "Push accumulators"
+    },
+    "ENT": {
+		"prefix": "ENT",
+		"body": [
+			"ENT $1"
+		],
+		"description": "Enter ACC Stack"
+    },
+    "LEAVE": {
+		"prefix": "LEAVE",
+		"body": [
+			"LEAVE $1"
+		],
+		"description": "Leave ACC Stack"
+    },
+    "DEC": {
+		"prefix": "DEC",
+		"body": [
+			"DEC $1"
+		],
+		"description": "Decrement ACC"
+    },
+    "INC": {
+		"prefix": "INC",
+		"body": [
+			"INC $1"
+		],
+		"description": "Increment ACC"
+    },
+    "+AR": {
+		"prefix": "+AR",
+		"body": [
+			"+AR $1"
+		],
+		"description": "dd ACC1 to Address Register 1"
+    },
+    "BLD": {
+		"prefix": "BLD",
+		"body": [
+			"BLD $1"
+		],
+		"description": "Instruction (Null)"
+    },
+    "NOP": {
+		"prefix": "NOP",
+		"body": [
+			"NOP $1"
+		],
+		"description": "Null Instruction"
+    },
+    "B#": {
+		"prefix": "B#",
+		"body": [
+			"B# $1"
+		],
+		"description": "Byte (8 bit)"
+    },
+    "W#": {
+		"prefix": "W#",
+		"body": [
+			"W# $1"
+		],
+		"description": "Word (16 bit)"
+    },
+    "L#": {
+		"prefix": "L#",
+		"body": [
+			"L# $1"
+		],
+		"description": "Long (32 bit)"
+    },
+    "S5Time#": {
+		"prefix": "S5Time#",
+		"body": [
+			"S5Time# $1"
+		],
+		"description": "S5 Time (2H,46M,30S,0MS)"
+    },
+    "T#": {
+		"prefix": "T#",
+		"body": [
+			"T# $1"
+		],
+		"description": "IEC Time (24D, 20H, 31M, 23S, 648MS)"
+    },
+    "D#": {
+		"prefix": "D#",
+		"body": [
+			"D# $1"
+		],
+		"description": "IEC Date (2007-10-28)"
+    },
+    "TOD#": {
+		"prefix": "TOD#",
+		"body": [
+			"TOD# $1"
+		],
+		"description": "Time of Day (23:59:59.999)"
+    },
+    "C#": {
+		"prefix": "C#",
+		"body": [
+			"C# $1"
+		],
+		"description": "BCD"
+    },
+    "P#": {
+		"prefix": "P#",
+		"body": [
+			"P# $1"
+		],
+		"description": "Pointer Address"
+    },
+    "CALL": {
+		"prefix": "CALL",
+		"body": [
+			"CALL $1"
+		],
+		"description": "Call FC,FB,SFC,SFB"
+    },
+    "CC": {
+		"prefix": "CC",
+		"body": [
+			"CC $1"
+		],
+		"description": "Conditional Call"
+    },
+    "UC": {
+		"prefix": "UC",
+		"body": [
+			"UC $1"
+		],
+		"description": "Unconditional Call"
+    },
+    "BE": {
+		"prefix": "BE",
+		"body": [
+			"BE $1"
+		],
+		"description": "Block End"
+    },
+    "BEC": {
+		"prefix": "BEC",
+		"body": [
+			"BEC $1"
+		],
+		"description": "Block End Conditional"
+    },
+    "BEU": {
+		"prefix": "BEU",
+		"body": [
+			"BEU $1"
+		],
+		"description": "Block End Unconditional"
+    },
+    "MCR": {
+		"prefix": "MCR",
+		"body": [
+			"MCR $1"
+		],
+		"description": "Save RLO in MCR Stack, Begin MCR"
+    },
+    "MCRA": {
+		"prefix": "MCRA",
+		"body": [
+			"MCRA $1"
+		],
+		"description": "Activate MCR"
+    },
+    "MCRD": {
+		"prefix": "MCRD",
+		"body": [
+			"MCRD $1"
+		],
+		"description": "Deactivate MCR"
+    },
+    "JU": {
+		"prefix": "JU",
+		"body": [
+			"JU $1"
+		],
+		"description": "Jump Unconditional"
+    },
+    "JL": {
+		"prefix": "JL",
+		"body": [
+			"JL $1"
+		],
+		"description": "Jump to Labels"
+    },
+    "JC": {
+		"prefix": "JC",
+		"body": [
+			"JC $1"
+		],
+		"description": "Jump if RLO = 1"
+    },
+    "JCN": {
+		"prefix": "JCN",
+		"body": [
+			"JCN $1"
+		],
+		"description": "Jump if RLO = 0"
+    },
+    "JCB": {
+		"prefix": "JCB",
+		"body": [
+			"JCB $1"
+		],
+		"description": "Jump if RLO = 1 with BR"
+    },
+    "JNB": {
+		"prefix": "JNB",
+		"body": [
+			"JNB $1"
+		],
+		"description": "Jump if RLO = 0 with BR"
+    },
+    "JBI": {
+		"prefix": "JBI",
+		"body": [
+			"JBI $1"
+		],
+		"description": "Jump if BR = 1"
+    },
+    "JNBI": {
+		"prefix": "JNBI",
+		"body": [
+			"JNBI $1"
+		],
+		"description": "Jump if BR = 0"
+    },
+    "JO": {
+		"prefix": "JO",
+		"body": [
+			"JO $1"
+		],
+		"description": "Jump if OV = 1"
+    },
+    "JOS": {
+		"prefix": "JOS",
+		"body": [
+			"JOS $1"
+		],
+		"description": "Jump if OS = 1"
+    },
+    "JZ": {
+		"prefix": "JZ",
+		"body": [
+			"JZ $1"
+		],
+		"description": "Jump if Zero"
+    },
+    "JN": {
+		"prefix": "JN",
+		"body": [
+			"JN $1"
+		],
+		"description": "Jump if Not Zero"
+    },
+    "JP": {
+		"prefix": "JP",
+		"body": [
+			"JP $1"
+		],
+		"description": "Jump if Plus"
+    },
+    "JM": {
+		"prefix": "JM",
+		"body": [
+			"JM $1"
+		],
+		"description": "Jump if Minus"
+    },
+    "JPZ": {
+		"prefix": "JPZ",
+		"body": [
+			"JPZ $1"
+		],
+		"description": "Jump if Plus or Zero"
+    },
+    "JMZ": {
+		"prefix": "JMZ",
+		"body": [
+			"JMZ $1"
+		],
+		"description": "Jump if Minus or Zero"
+    },
+    "JUO": {
+		"prefix": "JUO",
+		"body": [
+			"JUO $1"
+		],
+		"description": "Jump if Unordered"
+    },
+    "LOOP": {
+		"prefix": "LOOP",
+		"body": [
+			"LOOP $1"
+		],
+		"description": "loop"
+    },
+    "L": {
+		"prefix": "L",
+		"body": [
+			"L $1"
+		],
+		"description": "Load"
+    },
+    "L STW": {
+		"prefix": "L STW",
+		"body": [
+			"L STW $1"
+		],
+		"description": "Load Status Word into ACC1"
+    },
+    "LAR1": {
+		"prefix": "LA",
+		"body": [
+			"LAR1 $1"
+		],
+		"description": "Load Address Register 1 from ACC1"
+    },
+    "LAR2": {
+		"prefix": "LA",
+		"body": [
+			"LAR2 $1"
+		],
+		"description": "Load Address Register 2 from ACC1"
+    },
+    "LAR1 <D>": {
+		"prefix": "LA",
+		"body": [
+			"LAR1 <D>"
+		],
+		"description": "Load Address Register 1 with Double Integer (32-Bit Pointer)"
+    },
+    "LAR2 <D>": {
+		"prefix": "LA",
+		"body": [
+			"LAR2 <D>"
+		],
+		"description": "Load Address Register 2 with Double Integer (32-Bit Pointer)"
+    },
+    "LAR AR2": {
+		"prefix": "LA",
+		"body": [
+			"LAR AR2 $1"
+		],
+		"description": "Load Address Register 1 from Address Register 2"
+    },
+    "CAR": {
+		"prefix": "CAR",
+		"body": [
+			"CAR $1"
+		],
+		"description": "Exchange Address Register 1 with Address Register 2"
+    },
+    "T": {
+		"prefix": "T",
+		"body": [
+			"T $1"
+		],
+		"description": "Transfer"
+    },
+    "T STW": {
+		"prefix": "T STW",
+		"body": [
+			"T STW $1"
+		],
+		"description": "Transfer ACC1 into Status Word"
+    },
+    "TAR1": {
+		"prefix": "TA",
+		"body": [
+			"TAR1 $1"
+		],
+		"description": "Transfer Address Register 1 to ACC1"
+    },
+    "TAR2": {
+		"prefix": "TA",
+		"body": [
+			"TAR2 $1"
+		],
+		"description": "Transfer Address Register 2 to ACC1"
+    },
+    "TAR1 <D>": {
+		"prefix": "TA",
+		"body": [
+			"TAR1 <D>"
+		],
+		"description": "Transfer Address Register 1 to Destination (32-Bit Pointer)"
+    },
+    "TAR2 <D>": {
+		"prefix": "TA",
+		"body": [
+			"TAR2 <D>"
+		],
+		"description": "Transfer Address Register 2 to Destination (32-Bit Pointer)"
+    },
+    "FR": {
+		"prefix": "FR",
+		"body": [
+			"FR $1"
+		],
+		"description": "Enable Timer/Counter (Free)"
+    },
+    "LC": {
+		"prefix": "LC",
+		"body": [
+			"LC $1"
+		],
+		"description": "Load Current LC Timer/Counter Value into ACC1 as BCD (i.e. LC T 32)"
+    },
+    "SD": {
+		"prefix": "SD",
+		"body": [
+			"SD $1"
+		],
+		"description": "On-Delay Timer"
+    },
+    "SS": {
+		"prefix": "SS",
+		"body": [
+			"SS $1"
+		],
+		"description": "Retentive On-Delay Timer"
+    },
+    "SP": {
+		"prefix": "SP",
+		"body": [
+			"SP $1"
+		],
+		"description": "Pulse Timer"
+    },
+    "SF": {
+		"prefix": "SF",
+		"body": [
+			"SF $1"
+		],
+		"description": "Off-Delay Timer"
+    },
+    "SE": {
+		"prefix": "SE",
+		"body": [
+			"SE $1"
+		],
+		"description": "Extended Pulse Timer"
+    },
+    "CD": {
+		"prefix": "CD",
+		"body": [
+			"CD $1"
+		],
+		"description": "Counter Down"
+    },
+    "CU": {
+		"prefix": "CU",
+		"body": [
+			"CU $1"
+		],
+		"description": "Counter Up"
+    },
+    "OPN": {
+		"prefix": "OPN",
+		"body": [
+			"OPN $1"
+		],
+		"description": "Open a Data Block"
+    },
+    "CDB": {
+		"prefix": "CDB",
+		"body": [
+			"CDB $1"
+		],
+		"description": "Exchange Shared DB and Instance DB"
+    },
+    "L DBLG": {
+		"prefix": "L DBLG",
+		"body": [
+			"L DBLG $1"
+		],
+		"description": "Load Length of Shared DB in ACC1"
+    },
+    "L DBNO": {
+		"prefix": "L DBNO",
+		"body": [
+			"L DBNO $1"
+		],
+		"description": "Load Number of Shared DB in ACC1"
+    },
+    "L DILG": {
+		"prefix": "L DILG",
+		"body": [
+			"L DILG $1"
+		],
+		"description": "Load Length of Instance DB in ACC1"
+    },
+    "L DINO": {
+		"prefix": "L DINO",
+		"body": [
+			"L DINO $1"
+		],
+		"description": "Load Number of Instance DB in ACC1"
+    }
+}
