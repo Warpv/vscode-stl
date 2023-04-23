@@ -4,7 +4,7 @@ import * as vscode from 'vscode';
 interface TPouBlockDesc { PouBlock: string, SymType: vscode.SymbolKind, Desc: string };
 interface TVarBlockDesc { varKeyword: string, desc: string };
 
-export class STDocumentSymbolProvider implements vscode.DocumentSymbolProvider {
+export class STLDocumentSymbolProvider implements vscode.DocumentSymbolProvider {
     /*
         While identifying POU blocks, it is important to not allow the search in certain text,
         Quoted strings  :  (["'])(?:(?!\1)(?:\$\1|[\s\S]))*(?:\1|$)
@@ -102,7 +102,7 @@ export class STDocumentSymbolProvider implements vscode.DocumentSymbolProvider {
                         // determine if the CONSTANT attribute was present
                         let var_attr_constant = var_attr && var_attr[1].match(/(?:\/\/.*(?=\r?\n|$)|\(\*[\s\S]*?(?:\*\)|$)|\/\*[\s\S]*?(?:\*\/|$)|[\s\S])*?(?:$|\b(CONSTANT)\b)/iy) || null;
                         let isConstantVar = var_attr_constant && var_attr_constant[1] !== undefined || false;
-                        const varSymbol = STDocumentSymbolProvider.varBlocksList.find(varDes => varDes.varKeyword === pou_type)
+                        const varSymbol = STLDocumentSymbolProvider.varBlocksList.find(varDes => varDes.varKeyword === pou_type)
                             || { varKeyword: pou_type, desc: "<unknown>" } as TVarBlockDesc;
                         let symbol = new vscode.DocumentSymbol(
                             pou_type, varSymbol.desc, vscode.SymbolKind.File, pou_full_range, pou_reveal_range);
@@ -119,7 +119,7 @@ export class STDocumentSymbolProvider implements vscode.DocumentSymbolProvider {
                             [2] POU Name (if valid)
                         */
                         let pou_name = pous[5].match(rgx_pou_name);
-                        const pouBlockSymbol = STDocumentSymbolProvider.PouBlocksList.find(blockDes => blockDes.PouBlock === pou_type)
+                        const pouBlockSymbol = STLDocumentSymbolProvider.PouBlocksList.find(blockDes => blockDes.PouBlock === pou_type)
                             || { PouBlock: pou_type, SymType: vscode.SymbolKind.Null, Desc: "<unknown>" } as TPouBlockDesc;
                         let symbol = new vscode.DocumentSymbol(
                             checkUnnamedItem(pou_name && pou_name[2] || undefined), pouBlockSymbol.Desc,

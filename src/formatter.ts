@@ -1,7 +1,7 @@
 'use strict';
 import * as vscode from 'vscode';
 
-export class STFormatterProvider implements vscode.DocumentFormattingEditProvider {
+export class STLFormatterProvider implements vscode.DocumentFormattingEditProvider {
     private functions: Array<string> = [];
     private types: Array<string> = [];
     private bitligic: Array<string> = [];
