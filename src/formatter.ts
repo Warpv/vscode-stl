@@ -115,14 +115,14 @@ export class STLFormatterProvider implements vscode.DocumentFormattingEditProvid
 
         // Add space after keywords
         // IF( to IF (
-        regEx = new RegExp(`\\b(IF|WHILE|CASE)\\(`, "ig");
+        regEx = new RegExp(`\\b(ABS|ACOS|ASIN|ATAN|COS|SIN|TAN|EXP|LN|SQRT|A|AN|O|ON|X|XN|FN|FP|R|S|NOT|SET|CLR|SAVE|L|L STW|LAR1|CAR|T|T STW|TAR1|BTI|ITB|BTD|ITD|DTB|DTR|INVI|INVD|NEGI|NEGD|NEGR|CAW|CAD|RND|TRUNC|AW|AD|OW|OD|XOW|XOD|SSI|SSD|SLW|SRW|SLD|SRD|RLD|RRD|RLDA|RRDA|TAK|POP|PUSH|ENT|LEAVE|DEC|INC|BLD|NOP|B|W|L|S5TIME|T|D|TOD|C|P|SYMBOL|CALL|FC|FB|DB|CC|UC|BE|BEC|BEU|MCR|MCRA|MCRD|JU|JL|JC|JCN|JNB|JBI|JNBI|JO|JOS|JZ|JN|JP|JM|JPZ|JMZ|JUO|LOOP|L|L STW|LAR|CAR|T|T STW|TAR|FR|LC|R|SD|SS|SP|SF|SE|CD|CU|OPN|CDB|L DBLG|L DBNO|L DILG|L DINO)\\(`, "ig");
         text = text.replace(regEx, (match, key) => {
             return key !== undefined ? key + ' (' : match;
         });
 
-        // Add before after keywords
-        // )THEN to ) THEN
-        regEx = new RegExp(`\\)(THEN|DO|OF)\\b`, "ig");
+        // // Add before after keywords
+        // // )THEN to ) THEN
+        regEx = new RegExp(`\\)(MCR)\\b`, "ig");
         text = text.replace(regEx, (match, key) => {
             return key !== undefined ? ') ' + key : match;
         });
