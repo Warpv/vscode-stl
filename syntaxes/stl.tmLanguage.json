@@ -4,7 +4,7 @@
 	"patterns": [
 		{
 			"name": "support.function.stl",
-			"match": "\\b(I|R|D|M|BTI|ITB|BTD|ITD|DTB|DTR|INVI|INVD|NEGI|NEGD|NEGR|CAW|CAD|RND|TRUNC|AW|AD|OW|OD|XOW|XOD|SSI|SSD|SLW|SRW|SLD|SRD|RLD|RRD|RLDA|RRDA|TAK|POP|PUSH|ENT|LEAVE|DEC|INC|BLD|CALL|FC|FB|DB|CC|UC|BE|BEC|BEU|MCR (|) MCR|MCRA|MCRD|FR|LC|R|SD|SS|SP|SF|SE|CD|CU|OPN|CDB|L DBLG|L DBNO|L DILG|L DINO)\\b"
+			"match": "\\b(I|R|D|M|BTI|ITB|BTD|ITD|DTB|DTR|INVI|INVD|NEGI|NEGD|NEGR|CAW|CAD|RND|TRUNC|AW|AD|OW|OD|XOW|XOD|SSI|SSD|SLW|SRW|SLD|SRD|RLD|RRD|RLDA|RRDA|TAK|POP|PUSH|ENT|LEAVE|DEC|INC|AR1|AR2|BLD|CALL|FC|FB|DB|CC|UC|BE|BEC|BEU|MCR (|) MCR|MCRA|MCRD|FR|LC|R|SD|SS|SP|SF|SE|CD|CU|OPN|CDB|L DBLG|L DBNO|L DILG|L DINO)\\b"
 		},
 		{
 			"include": "#keywords"
@@ -33,7 +33,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.stl",
-					"match": "\\b(A|AN|O|ON|X|XN|FN|FP|R|S|NOT|SET|CLR|SAVE|L|L STW|LAR|CAR|T|T STW|TAR)\\b"
+					"match": "\\b(A|AN|O|ON|X|XN|FN|FP|R|S|NOT|SET|CLR|SAVE|L|STW|LAR1|LAR2|CAR|T|STW|TAR1|TAR2)\\b"
 				}
 			]
 		},
@@ -57,11 +57,14 @@
 			"name": "string.quoted.double.stl",
 			"begin": "\"",
 			"end": "\"",
-			"match": "S5Time#|B#|W#|L#|T#|D#|TOD#|C#|P#|Symbol#|2#|16#",
 			"patterns": [
 				{
 					"name": "constant.character.escape.stl",
 					"match": "\\\\."
+				},
+				{
+					"name": "string.timer.stl",
+					"match": "\\S5Time#|B#|W#|L#|T#|D#|TOD#|C#|P#|Symbol#|2#|16#"
 				}
 			]
 		},
