@@ -18,6 +18,9 @@
 			"include": "#storage"
 		},
 		{
+			"include": "#functions"
+		},
+		{
 			"name": "variable.name.labels.stl",
 			"match": "^\\%*.*:"
 		}
@@ -82,6 +85,31 @@
 		"storage": {
 			"name": "storage.datablocks.stl",
 			"match": "\\b(OPN|CDB|L DBLG|L DBNO|L DILG|L sDINO)\\b"
+		},
+		"functions": {
+			"patterns": [
+				{
+					"name": "support.function.st",
+					"match": "\\b(?:JU|JL|JC|JCN|JNB|JBI|JNBI|JO|JOS|JZ|JN|JP|JM|JPZ|JMZ|JUO|LOOP)(?=\\()"
+				},
+				{
+					"begin": "([a-zA-Z_0-9]+)(\\()",
+					"beginCaptures": {
+						"1": {
+							"name": "entity.name.function.st"
+						},
+						"2": {
+							"name": "punctuation.parenthesis.begin.st"
+						}
+					},
+					"end": "\\)",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.parenthesis.end.st"
+						}
+					}
+				}
+			]
 		}
 	},
 	"scopeName": "source.stl"

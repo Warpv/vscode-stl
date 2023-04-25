@@ -1,51 +1,55 @@
-## Features
+[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT) ![workflow](https://github.com/Serhioromano/vscode-st/actions/workflows/publish.yml/badge.svg) [![Version](https://vsmarketplacebadge.apphb.com/version-short/serhioromano.vscode-st.svg)](https://marketplace.visualstudio.com/items?itemName=serhioromano.vscode-st) [![Installs](https://vsmarketplacebadge.apphb.com/installs-short/serhioromano.vscode-st.svg)](https://marketplace.visualstudio.com/items?itemName=serhioromano.vscode-st) [![Ratings](https://vsmarketplacebadge.apphb.com/rating-short/serhioromano.vscode-st.svg)](https://marketplace.visualstudio.com/items?itemName=serhioromano.vscode-st)
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+# Structured Text (IEC 61131-3)
 
-For example if there is an image subfolder under your extension project workspace:
+Most complete Structured Text language support. Features includes:
 
-\!\[feature X\]\(images/feature-x.png\)
+- Syntax highlights in \*.st, \*.iecst files
+- Syntax highlights in \*.md (Markdown) files in `iecst` code block
+- Syntax highlights in \*.xml files in `<Declaration>` and `<ST>` code block
+- Snippets (enter `st ` to see list of all snippets)
+- Outline view
+- Breadcrumbs code navigation
+- Go to Symbol in File
+- Formatting (*beta)
+- Commands
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Syntax Highlights
 
-## Requirements
+Includes syntax highlight based on IEC 61131-3 draft, including namespaces, SFC elements (STEP, ACTION, TRANSITION), constant variables (2#000_1010, 16#1E, INT#23) and more.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+![Structured Text syntax highlights example](https://raw.githubusercontent.com/Serhioromano/vscode-st/master/images/demo.gif)
 
-## Extension Settings
+Also highlight in Markdown files
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+![Example]()
 
-For example:
+## Snippets
 
-This extension contributes the following settings:
+Fast growing snippets library. All cycles, conditions and declarations.
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## Formatter (work in progress)
 
-## Known Issues
+Utilize VS Code Formatter API. Use general formatting command short keys. It capitalize all known keywords like `TRUE`, `FALSE`, `IF`, `BOOL`, ... It also add spaces.
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## Roadmap
+
+- LSP (Language Server Protocol)
+- Suggestions
+- Lints
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+- fix - extensions metadata tags
+- add - new functions to support logi.CAD 3 reference variables.
+- enhance - auto indentations inside IF, PROGRAM, VAR, ...
+- fix - close `[` bracket
+- add - region folding
+- improve - keywords case
+- improve - readme file
+- improve - syntax highlights scopes
+- add- few new snippets.
+- fix - some keywords highlight issue
+- add- new file extensions to support logi.CAD 3 projects.
