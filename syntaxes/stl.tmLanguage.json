@@ -21,6 +21,12 @@
 			"include": "#functions"
 		},
 		{
+            "include": "#operators"
+        },
+		{
+			"include": "#variable"
+		},
+		{
 			"name": "variable.name.labels.stl",
 			"match": "^\\%*.*:"
 		}
@@ -29,7 +35,21 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.stl",
-				"match": "\\b(A|AN|O|ON|X)\\b"
+				"match": "\\b(A|AN|O|ON|X|XN|FX|FP|R|S|NOT|SET|CLR|SAVE)\\b"
+			},
+			{
+				"name": "invalid.st",
+				"match": "#"
+			}]
+		},
+		"variable":{
+			"patterns": [{
+				"name": "variable.name.labels.stl",
+				"match": "^\\%*.*:"
+			},
+			{
+				"name": "variable.name.stl",
+				"match": "\\b(I|R|D|M)\\b"
 			}]
 		},
 		"strings": {
@@ -89,25 +109,49 @@
 		"functions": {
 			"patterns": [
 				{
-					"name": "support.function.st",
+					"name": "support.function.stl",
 					"match": "\\b(?:JU|JL|JC|JCN|JNB|JBI|JNBI|JO|JOS|JZ|JN|JP|JM|JPZ|JMZ|JUO|LOOP)(?=\\()"
 				},
 				{
 					"begin": "([a-zA-Z_0-9]+)(\\()",
 					"beginCaptures": {
 						"1": {
-							"name": "entity.name.function.st"
+							"name": "entity.name.function.stl"
 						},
 						"2": {
-							"name": "punctuation.parenthesis.begin.st"
+							"name": "punctuation.parenthesis.begin.stl"
 						}
 					},
 					"end": "\\)",
 					"endCaptures": {
 						"0": {
-							"name": "punctuation.parenthesis.end.st"
+							"name": "punctuation.parenthesis.end.stl"
 						}
 					}
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"name": "keyword.operator.assignment.stl",
+					"match": "(+I|+R|+D|-I|-R|-D|*I|*R|*D|/I|/R|/D)"
+				},
+				{
+					"name": "keyword.operator.bitlogical.stl",
+					"match": "\\b(A|AN|O|ON|X|XN|FN|FP|R|S|NOT|SET|CLR|SAVE|AW|AD|OW|OD|XOW|XOD)\\b|&"
+				},
+				{
+					"name": "keyword.operator.comparison.stl",
+					"match": "(?:<>|<|=|>|<=|>=|==)"
+				},
+				{
+					"name": "keyword.operator.arithmetic.stl",
+					"match": "(?:\\+|\\-|\\/|\\*|MOD)"
+				},
+				{
+					"name": "keyword.operator.arithmetic.stl",
+					"match": "\\b(?:ABS|SIN|ABS|ACOS|ASIN|ATAN|COS|EXP|EXPT|LN|LOG|SIN|SQRT|TAN|SEL|MUX|SHL|SHR|ROL|ROR|ADD|DIV|MUL|SUB|MAX|MIN|ADR(INstl)?|SIZE(OF)?|BIT_?ADR|TRUNC(_INT)?)(?=\\()"
 				}
 			]
 		}
