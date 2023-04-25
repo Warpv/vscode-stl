@@ -10,11 +10,7 @@ Most complete Statement List language support. Features includes:
 
 Includes syntax highlight, including namespaces, constant variables and more.
 
-![Statement List syntax highlights example]()
-
 Also highlight in Markdown files
-
-![Example]()
 
 ## Snippets
 
@@ -25,10 +21,6 @@ Fast growing snippets library. All cycles, conditions and declarations.
 Utilize VS Code Formatter API. Use general formatting command short keys. It capitalize all known keywords like `NOP 0`, `BTW`, `LOOP`, ... It also add spaces.
 
 ## Roadmap
-
-- LSP (Language Server Protocol)
-- Suggestions
-- Lints
 
 ## Release Notes
 
