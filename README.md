@@ -1,51 +1,37 @@
-## Features
+[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT) ![workflow](https://github.com/Serhioromano/vscode-st/actions/workflows/publish.yml/badge.svg) [![Version](https://marketplace.visualstudio.com/items?itemName=NIKOinc.vscode-stl&ssr=false#version-history)](https://marketplace.visualstudio.com/items?itemName=NIKOinc.vscode-stl&ssr=false#version-history) [![Installs](https://marketplace.visualstudio.com/items?itemName=NIKOinc.vscode-stl&ssr=false#overview)](https://marketplace.visualstudio.com/items?itemName=NIKOinc.vscode-stl&ssr=false#overview) [![Ratings](https://marketplace.visualstudio.com/items?itemName=NIKOinc.vscode-stl&ssr=false#review-details)](https://marketplace.visualstudio.com/items?itemName=NIKOinc.vscode-stl&ssr=false#review-details)
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+# Statement List
 
-For example if there is an image subfolder under your extension project workspace:
+Most complete Statement List language support. Features includes:
 
-\!\[feature X\]\(images/feature-x.png\)
+- Commands
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Syntax Highlights
 
-## Requirements
+Includes syntax highlight, including namespaces, constant variables and more.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+![Statement List syntax highlights example]()
 
-## Extension Settings
+Also highlight in Markdown files
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+![Example]()
 
-For example:
+## Snippets
 
-This extension contributes the following settings:
+Fast growing snippets library. All cycles, conditions and declarations.
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## Formatter (work in progress)
 
-## Known Issues
+Utilize VS Code Formatter API. Use general formatting command short keys. It capitalize all known keywords like `NOP 0`, `BTW`, `LOOP`, ... It also add spaces.
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## Roadmap
+
+- LSP (Language Server Protocol)
+- Suggestions
+- Lints
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+- fix

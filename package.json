@@ -2,7 +2,7 @@
   "name": "vscode-stl",
   "displayName": "vscode_stl",
   "description": "STL snippies and highlight",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "publisher": "NIKOinc",
   "engines": {
     "vscode": "^1.77.0"
