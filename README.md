@@ -10,7 +10,7 @@ Most complete Statement List language support. Features includes:
 
 Includes syntax highlight, including namespaces, constant variables and more.
 
-[Also highlight in Markdown files](https://github.com/nikoincc/vscode-stl/blob/main/images/show.gif)
+![Statement List syntax highlights example](https://github.com/nikoincc/vscode-stl/blob/main/images/show.gif)
 
 ## Snippets
 
