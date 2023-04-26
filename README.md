@@ -1,5 +1,6 @@
 ![GitHub](https://img.shields.io/github/license/nikoincc/vscode-stl)
-
+![GitHub package.json version](https://img.shields.io/github/package-json/v/nikoincc/vscode-stl)
+![Visual Studio Marketplace Rating (Stars)](https://img.shields.io/visual-studio-marketplace/stars/NIKOinc.vscode-stl?color=%2376B900&logo=visualstudiocode)
 ![GitHub all releases](https://img.shields.io/github/downloads/nikoincc/vscode-stl/total?color=%23007ACC&logo=visualstudiocode)
 
 # Statement List
