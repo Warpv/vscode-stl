@@ -2,9 +2,12 @@
 
 # Statement List
 
-Most complete Statement List language support. Features includes:
+Statement List language support. Features includes:
 
 - Commands
+- Snippies
+- Text Highlight
+- Auto Spaces
 
 ## Syntax Highlights
 
@@ -18,7 +21,7 @@ Fast growing snippets library. All cycles, conditions and declarations.
 
 ## Formatter (work in progress)
 
-Utilize VS Code Formatter API. Use general formatting command short keys. It capitalize all known keywords like `NOP 0`, `BTW`, `LOOP`, ... It also add spaces.
+VS Code Formatter API. Use general formatting command short keys. It capitalize all known keywords like `NOP 0`, `BTW`, `LOOP`, ... It also add spaces.
 
 ## Roadmap
 
