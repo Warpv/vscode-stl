@@ -2,7 +2,7 @@
   "name": "vscode-stl",
   "displayName": "vscode_stl",
   "description": "STL snippies and highlight",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "publisher": "NIKOinc",
   "engines": {
     "vscode": "^1.77.0"
@@ -22,6 +22,13 @@
     "PLC",
     "CoDeSys"
   ],
+  "author": "Daniil Nicholson",
+  "license": "MIT",
+  "bugs": {
+      "url": "https://github.com/nikoincc/vscode-stl/issues",
+      "email": "nqy2000@gmail.com"
+  },
+  "homepage": "https://github.com/nikoincc/vscode-stl/blob/main/README.md",
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
