@@ -1,4 +1,6 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT) ![workflow](https://github.com/Serhioromano/vscode-st/actions/workflows/publish.yml/badge.svg) [![Version](https://marketplace.visualstudio.com/items?itemName=NIKOinc.vscode-stl&ssr=false#version-history)](https://marketplace.visualstudio.com/items?itemName=NIKOinc.vscode-stl&ssr=false#version-history) [![Installs](https://marketplace.visualstudio.com/items?itemName=NIKOinc.vscode-stl&ssr=false#overview)](https://marketplace.visualstudio.com/items?itemName=NIKOinc.vscode-stl&ssr=false#overview) [![Ratings](https://marketplace.visualstudio.com/items?itemName=NIKOinc.vscode-stl&ssr=false#review-details)](https://marketplace.visualstudio.com/items?itemName=NIKOinc.vscode-stl&ssr=false#review-details)
+![GitHub](https://img.shields.io/github/license/nikoincc/vscode-stl)
+
+![GitHub all releases](https://img.shields.io/github/downloads/nikoincc/vscode-stl/total?color=%23007ACC&logo=visualstudiocode)
 
 # Statement List
 
