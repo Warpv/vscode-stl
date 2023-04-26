@@ -22,8 +22,13 @@ Utilize VS Code Formatter API. Use general formatting command short keys. It cap
 
 ## Roadmap
 
+- add full functional formatter
+- add "Tag_1" support file
+- add start script to inisialize project
+
 ## Release Notes
 
-### 1.0.0
+### 1.1.0
 
-- fix
+- fix syntax highlight
+- fix snippies
