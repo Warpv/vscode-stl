@@ -1,29 +1,37 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT) ![workflow](https://github.com/Serhioromano/vscode-st/actions/workflows/publish.yml/badge.svg) [![Version](https://marketplace.visualstudio.com/items?itemName=NIKOinc.vscode-stl&ssr=false#version-history)](https://marketplace.visualstudio.com/items?itemName=NIKOinc.vscode-stl&ssr=false#version-history) [![Installs](https://marketplace.visualstudio.com/items?itemName=NIKOinc.vscode-stl&ssr=false#overview)](https://marketplace.visualstudio.com/items?itemName=NIKOinc.vscode-stl&ssr=false#overview) [![Ratings](https://marketplace.visualstudio.com/items?itemName=NIKOinc.vscode-stl&ssr=false#review-details)](https://marketplace.visualstudio.com/items?itemName=NIKOinc.vscode-stl&ssr=false#review-details)
+![GitHub](https://img.shields.io/github/license/nikoincc/vscode-stl)
+![Visual Studio Marketplace Rating (Stars)](https://img.shields.io/visual-studio-marketplace/stars/NIKOinc.vscode-stl?color=%2376B900&logo=visualstudiocode)
+![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/NIKOinc.vscode-stl?color=%23007ACC&logo=visualstudiocode)
 
 # Statement List
 
-Most complete Statement List language support. Features includes:
+Statement List language support. Features includes:
 
-- Commands
+- Snippies
+- Text Highlight
+- Auto Spaces
 
 ## Syntax Highlights
 
 Includes syntax highlight, including namespaces, constant variables and more.
 
-Also highlight in Markdown files
+![Statement List syntax highlights example](https://github.com/nikoincc/vscode-stl/blob/main/images/show.gif)
 
 ## Snippets
 
-Fast growing snippets library. All cycles, conditions and declarations.
+Snippets library. All cycles, conditions and declarations.
 
 ## Formatter (work in progress)
 
-Utilize VS Code Formatter API. Use general formatting command short keys. It capitalize all known keywords like `NOP 0`, `BTW`, `LOOP`, ... It also add spaces.
+VS Code Formatter API. Use general formatting command short keys. It capitalize all known keywords like `NOP 0`, `BTW`, `LOOP`, ... It also add spaces.
 
 ## Roadmap
 
+- add full functional formatter
+- add start script to inisialize project
+
 ## Release Notes
 
-### 1.0.0
+### 1.1.0
 
-- fix
+- fix syntax highlight
+- fix snippies

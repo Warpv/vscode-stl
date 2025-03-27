@@ -31,7 +31,11 @@ STR:  NOP   0
       JU    INC
 END:  NOP   0
 
-TASK 
+
+
+
+
+
 
 L %I0.0
 T %Q0.0

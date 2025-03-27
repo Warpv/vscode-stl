@@ -2,8 +2,8 @@
   "name": "vscode-stl",
   "displayName": "vscode_stl",
   "description": "STL snippies and highlight",
-  "version": "1.0.1",
-  "publisher": "NIKOinc",
+  "version": "1.2.0",
+  "publisher": "Warpv",
   "engines": {
     "vscode": "^1.77.0"
   },
@@ -14,7 +14,7 @@
   ],
   "repository": {
       "type": "git",
-      "url": "https://github.com/nikoincc/vscode-stl.git"
+      "url": "https://github.com/Warpv/vscode-stl.git"
   },
   "keywords": [
     "STL",
@@ -22,6 +22,13 @@
     "PLC",
     "CoDeSys"
   ],
+  "author": "Daniil Nicholson",
+  "license": "MIT",
+  "bugs": {
+      "url": "https://github.com/Warpv/vscode-stl/issues",
+      "email": "nqy2000@gmail.com"
+  },
+  "homepage": "https://github.com/Warpv/vscode-stl/blob/main/README.md",
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
