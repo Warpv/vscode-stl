@@ -6,7 +6,6 @@
 
 Statement List language support. Features includes:
 
-- Commands
 - Snippies
 - Text Highlight
 - Auto Spaces
@@ -19,16 +18,13 @@ Includes syntax highlight, including namespaces, constant variables and more.
 
 ## Snippets
 
-Fast growing snippets library. All cycles, conditions and declarations.
+Snippets library. All cycles, conditions and declarations.
 
 ## Formatter (work in progress)
 
 VS Code Formatter API. Use general formatting command short keys. It capitalize all known keywords like `NOP 0`, `BTW`, `LOOP`, ... It also add spaces.
 
 ## Roadmap
-
-- add full functional formatter
-- add "Tag_1" support file
 - add start script to inisialize project
 
 ## Release Notes
