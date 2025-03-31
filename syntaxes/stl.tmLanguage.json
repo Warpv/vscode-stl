@@ -3,53 +3,189 @@
 	"name": "Statement List",
 	"patterns": [
 		{
-			"name": "support.function.stl",
-			"match": "\\b(I|R|D|M|BTI|ITB|BTD|ITD|DTB|DTR|INVI|INVD|NEGI|NEGD|NEGR|CAW|CAD|RND|TRUNC|AW|AD|OW|OD|XOW|XOD|SSI|SSD|SLW|SRW|SLD|SRD|RLD|RRD|RLDA|RRDA|TAK|POP|PUSH|ENT|LEAVE|DEC|INC|AR1|AR2|BLD|CALL|FC|FB|DB|CC|UC|BE|BEC|BEU|MCR (|) MCR|MCRA|MCRD|FR|LC|R|SD|SS|SP|SF|SE|CD|CU|OPN|CDB|L DBLG|L DBNO|L DILG|L DINO)\\b"
+			"include": "#comments"
+		},
+		{
+			"include": "#labelDefinitions"
+		},
+		{
+			"include": "#jumpInstructions"
+		},
+		{
+			"include": "#structureReferences"
+		},
+		{
+			"include": "#assignment"
+		},
+		{
+			"include": "#memoryInstructions"
 		},
 		{
 			"include": "#keywords"
 		},
 		{
+			"include": "#operators"
+		},
+		{
 			"include": "#strings"
 		},
 		{
-			"include": "#comments"
-		},
-		{
 			"include": "#numerics"
-		},
-		{
-			"include": "#storage"
-		},
-		{
-            "include": "#operators"
-        },
-		{
-			"include": "#variable"
 		}
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [
+		"comments": {
+			"patterns": [{
+					"name": "comment.line.double-slash.stl",
+					"match": "//.*$"
+				},
 				{
-					"name": "keyword.control.stl",
-					"match": "\\b(A|AN|O|ON|X|XN|FN|FP|R|S|NOT|SET|CLR|SAVE|L|STW|LAR1|LAR2|CAR|T|STW|TAR1|TAR2)\\b"
+					"name": "comment.block.stl",
+					"begin": "/\\*",
+					"end": "\\*/"
 				}
 			]
 		},
-		"variable":{
+		"labelDefinitions": {
 			"patterns": [
 				{
-					"name": "variable.name.stl",
-					"match": "^\\s*.*:"
+					"match": "^\\s*([A-Za-z0-9_]+):\\s*",
+					"captures": {
+						"1": {
+							"name": "entity.name.label.definition.stl"
+						}
+					}
+				}
+			]
+		},
+		"jumpInstructions": {
+			"patterns": [
+				{
+					"match": "\\b(JU|JL|JC|JCN|JNB|JBI|JNBI|JO|JOS|JZ|JN|JP|JM|JPZ|JMZ|JUO)\\s+([A-Za-z0-9_]+)",
+					"captures": {
+						"1": {
+							"name": "keyword.control.jump.stl"
+						},
+						"2": {
+							"name": "entity.name.label.reference.stl"
+						}
+					}
+				}
+			]
+		},
+		"structureReferences": {
+			"patterns": [
+				{
+					"match": "(#)([A-Za-z0-9_]+)((?:\\.[A-Za-z0-9_]+(?:\\[[0-9]+\\])?)+)",
+					"captures": {
+						"1": {
+							"name": "punctuation.definition.variable.stl"
+						},
+						"2": {
+							"name": "variable.other.object.stl"
+						},
+						"3": {
+							"patterns": [
+								{
+									"match": "\\.([A-Za-z0-9_]+)",
+									"captures": {
+										"1": {
+											"name": "variable.other.property.stl"
+										}
+									}
+								},
+								{
+									"match": "(\\[)([0-9]+)(\\])",
+									"captures": {
+										"1": {
+											"name": "punctuation.section.brackets.begin.stl"
+										},
+										"2": {
+											"name": "constant.numeric.decimal.stl"
+										},
+										"3": {
+											"name": "punctuation.section.brackets.end.stl"
+										}
+									}
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		"assignment": {
+			"patterns": [
+				{
+					"name": "keyword.operator.assignment.stl",
+					"match": "\\s=\\s|\\s:=\\s"
+				}
+			]
+		},
+		"memoryInstructions": {
+			"patterns": [
+				{
+					"match": "\\b(L|T)\\s+([^\\s]+)",
+					"captures": {
+						"1": {
+							"name": "keyword.other.memory.stl"
+						},
+						"2": {
+							"name": "variable.other.stl"
+						}
+					}
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "support.function.math.stl",
+					"match": "\\b(ABS|ACOS|ASIN|ATAN|COS|SIN|TAN|EXP|LN|SQRT)\\b"
 				},
 				{
-					"name": "variable.name.stl",
-					"match": "\\b(JU|JL|JC|JCN|JNB|JBI|JNBI|JO|JOS|JZ|JN|JP|JM|JPZ|JMZ|JUO|LOOP|NOP|END|REOP)\\b"
+					"name": "storage.type.stl",
+					"match": "\\b(I|R|D|B|W|L|S5TIME|TOD|C|P|SYMBOL)\\b"
 				},
 				{
-					"name": "variable.parameter.stl",
-					"match": "\\b(D)\\b"
+					"name": "keyword.control.stl",
+					"match": "\\b(LOOP|CALL|FC|FB|DB|CC|UC|BE|BEC|BEU|MCR|MCRA|MCRD|TAK|POP|PUSH|ENT|LEAVE|DEC|INC|BLD|NOP)\\b"
+				},
+				{
+					"name": "keyword.other.memory.stl",
+					"match": "\\b(R|S|SET|CLR|SAVE|L STW|LAR|CAR|T STW|TAR|OPN|CDB|L DBLG|L DBNO|L DILG|L DINO)\\b"
+				},
+				{
+					"name": "keyword.other.timer.stl",
+					"match": "\\b(FR|LC|R|SD|SS|SP|SF|SE|CD|CU)\\b"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"name": "keyword.operator.comparison.type.stl",
+					"match": "==I|==R|==D|<>I|<>R|<>D|<=I|<=R|<=D|>=I|>=R|>=D|<I|<R|<D|>I|>R|>D"
+				},
+				{
+					"name": "keyword.operator.arithmetic.type.stl",
+					"match": "\\+I|\\+R|\\+D|-I|-R|-D|\\*I|\\*R|\\*D|/I|/R|/D|MOD"
+				},
+				{
+					"name": "keyword.operator.logical.stl",
+					"match": "\\b(A|AN|O|ON|X|XN|FN|FP|NOT)\\b"
+				},
+				{
+					"name": "keyword.operator.bitwise.stl",
+					"match": "\\b(AW|AD|OW|OD|XOW|XOD)\\b"
+				},
+				{
+					"name": "keyword.operator.shift.stl",
+					"match": "\\b(SSI|SSD|SLW|SRW|SLD|SRD|RLD|RRD|RLDA|RRDA)\\b"
+				},
+				{
+					"name": "keyword.operator.conversion.stl",
+					"match": "\\b(BTI|ITB|BTD|ITD|DTB|DTR|INVI|INVD|NEGI|NEGD|NEGR|CAW|CAD|RND|TRUNC)\\b"
 				}
 			]
 		},
@@ -61,30 +197,14 @@
 				{
 					"name": "constant.character.escape.stl",
 					"match": "\\\\."
-				},
-				{
-					"name": "string.timer.stl",
-					"match": "\\S5Time#|B#|W#|L#|T#|D#|TOD#|C#|P#|Symbol#|2#|16#"
-				}
-			]
-		},
-		"comments": {
-			"patterns": [{
-					"name": "comment.stl",
-					"match": "//.*$"
-				},
-				{
-					"name": "comment.block.stl",
-					"begin": "/\\*",
-					"end": "\\*/"
 				}
 			]
 		},
 		"numerics": {
 			"patterns": [
 				{
-					"name": "constant.numeric.dec.stl",
-					"match": "#?-?[0-9\\.]+\\b"
+					"name": "constant.numeric.decimal.stl",
+					"match": "#?-?[0-9]+(\\.[0-9]+)?\\b"
 				},
 				{
 					"name": "constant.numeric.hex.stl",
@@ -97,22 +217,6 @@
 				{
 					"name": "constant.other.stl",
 					"match": "#\\(.*\\)"
-				},
-				{
-					"name": "constant.other.stl",
-					"match": "=.*"
-				},
-				{
-					"name": "constant.comparison.stl",
-					"match": "(?:<>|<|=|>|<=|>=|==)"
-				},
-				{
-					"name": "constant.arithmetic.stl",
-					"match": "(?:\\+|\\-|\\/|\\*|MOD)"
-				},
-				{
-					"name": "constant.arithmetic.stl",
-					"match": "(?:ABS|ACOS|ASIN|ATAN|COS|SIN|TAN|EXP|LN|SQRT)"
 				}
 			]
 		}

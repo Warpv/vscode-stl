@@ -1,20 +1,18 @@
 {
   "name": "vscode-stl",
-  "displayName": "vscode_stl",
+  "displayName": "vscode-stl",
   "description": "STL snippies and highlight",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "publisher": "NIKOinc",
   "engines": {
-    "vscode": "^1.77.0"
+    "vscode": "^1.98.0"
   },
   "categories": [
-    "Programming Languages",
-    "Snippets",
-    "Formatters"
+    "Programming Languages"
   ],
   "repository": {
       "type": "git",
-      "url": "https://github.com/nikoincc/vscode-stl.git"
+      "url": "https://github.com/Warpv/vscode-stl.git"
   },
   "keywords": [
     "STL",
@@ -22,101 +20,17 @@
     "PLC",
     "CoDeSys"
   ],
-  "author": "Daniil Nicholson",
-  "license": "MIT",
-  "bugs": {
-      "url": "https://github.com/nikoincc/vscode-stl/issues",
-      "email": "nqy2000@gmail.com"
-  },
-  "homepage": "https://github.com/nikoincc/vscode-stl/blob/main/README.md",
-  "activationEvents": [],
-  "main": "./out/extension.js",
   "contributes": {
-    "configuration": {
-      "type": "object",
-      "title": "Statement List configuration",
-      "properties": {
-          "stl.format.enable": {
-              "type": "boolean",
-              "default": true,
-              "description": "Automatically convert constants like AN, LOOP, ...and other keywords to upper case."
-        }
-      }
-    },
-    "languages": [
-      {
-        "id": "stl",
-        "aliases": [
-            "Statement List",
-            "STL"
-          ],
-        "extensions": [
-            ".stl",
-            ".s"
-          ],
-        "configuration": "./language-configuration.json"
-      }
-    ],
-    "grammars": [
-      {
-        "scopeName": "source.stl",
-        "language": "stl",
-        "path": "./syntaxes/stl.tmLanguage.json"
-      },
-      {
-        "scopeName": "markdown.iecstl.codeblock",
-        "path": "./syntaxes/md.codeblock.json",
-        "injectTo": [
-            "text.html.markdown"
-          ],
-        "embeddedLanguages": {
-          "meta.embedded.block.iecstlmd": "stl"
-          }
-      },
-      {
-        "scopeName": "xml.iecstl.codeblock",
-        "path": "./syntaxes/xml.codeblock.json",
-        "injectTo": [
-            "text.xml"
-          ],
-        "embeddedLanguages": {
-            "meta.embedded.block.iecstlxml": "stl"
-          }
-      }
-    ],
-    "snippets": [
-      {
-        "language": "stl",
-        "path": "./snippets/stl.snippets.json"
-      }
-    ]
-    },
-    "commands": [
-      {
-        "command": "vscode_stl.frog",
-        "title": "frog swamp"
-      }
-    ],
-  "icon": "icon.png",
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "pretest": "npm run compile && npm run lint",
-    "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
-  },
-  "devDependencies": {
-    "@types/vscode": "^1.77.0",
-    "@types/glob": "^8.1.0",
-    "@types/mocha": "^10.0.1",
-    "@types/node": "16.x",
-    "@typescript-eslint/eslint-plugin": "^5.56.0",
-    "@typescript-eslint/parser": "^5.56.0",
-    "eslint": "^8.36.0",
-    "glob": "^8.1.0",
-    "mocha": "^10.2.0",
-    "typescript": "^4.9.5",
-    "@vscode/test-electron": "^2.3.0"
+    "languages": [{
+      "id": "stl",
+      "aliases": ["Statement List", "stl"],
+      "extensions": [".stl .awl .s .STL .AWL .S"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "stl",
+      "scopeName": "source.stl",
+      "path": "./syntaxes/stl.tmLanguage.json"
+    }]
   }
 }

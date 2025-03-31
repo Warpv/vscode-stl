@@ -1,39 +1,25 @@
 {
-	"comments": {
-		"lineComment": "//",
-		"blockComment": ["/*", "*/"]
-	},
-	"brackets": [
+    "comments": {
+        "lineComment": "//",
+        "blockComment": [ "/*", "*/" ]
+    },
+    "brackets": [
         ["{", "}"],
         ["[", "]"],
         ["(", ")"]
     ],
-	"autoClosingPairs": [
-		["{", "}"],
+    "autoClosingPairs": [
+        ["{", "}"],
         ["[", "]"],
         ["(", ")"],
         ["\"", "\""],
-        ["'", "'"],
-		["MCR (", ") MCR"]
+        ["'", "'"]
     ],
-	"autoCloseBefore": " \n\t",
-	"surroundingPairs": [
-		["{", "}"],
-		["[", "]"],
-		["(", ")"],
-		["/*", "*/"],
-		["\"", "\""],
-		["'", "'"]
-	],
-	// "indentationRules": {
-	// 	"increaseIndentPattern": "({(?!.+}).*|\\(|\\[|(IF|ELSE|FOR|WHILE|CASE|THEN|ELSIF|DO|BY|OF|REPEAT|).*)\\s*(/[\\(*].*)?$",
-	// 	"decreaseIndentPattern": "^((.*\\*\\/)?|(.*\\*\\)?)\\s*((\\})|(\\)+[;,])|(\\][;,])|\\b(else)|\\b((END_(IF|FOR|WHILE|CASE|REPEAT));))"
-	// }
-
-	//"enhancedBrackets":[
-	// 	{ "openTrigger": "\\s", "open": "VAR", "closeComplete": "END_VAR", "matchCase": true },
-	// 	{ openTrigger: 'e', open: /case$/i, closeComplete: 'end', matchCase: true },
-	// 	{ openTrigger: 'n', open: /when$/i, closeComplete: 'then', matchCase: true }
-	// ]
-	// noindentBrackets: '()',
+    "surroundingPairs": [
+        ["{", "}"],
+        ["[", "]"],
+        ["(", ")"],
+        ["\"", "\""],
+        ["'", "'"]
+    ]
 }
