@@ -22,6 +22,9 @@
     "PLC",
     "CoDeSys"
   ],
+  "activationEvents": [
+    "onLanguage:stl"
+  ],
   "contributes": {
     "languages": [{
       "id": "stl",
@@ -40,11 +43,9 @@
       }
     }
   },
-  "dependencies": {
-    "vscode": "^1.1.37"
-  },
   "devDependencies": {
     "@types/vscode": "^1.98.0",
-    "@types/node": "^16.11.7"
+    "@types/node": "^16.11.7",
+    "vscode": "^1.1.37"
   }
 }
