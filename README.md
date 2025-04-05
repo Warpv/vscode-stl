@@ -15,7 +15,6 @@ Statement List language support. Features includes:
 
 Includes syntax highlight, including namespaces, constant variables and more.
 
-![Statement List syntax highlights example](https://github.com/Warpv/vscode-stl/blob/main/images/show.gif)
 ![Statement List syntax highlights example](images/show.gif)
 
 ## Roadmap
