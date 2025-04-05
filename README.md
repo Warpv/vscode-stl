@@ -15,7 +15,8 @@ Statement List language support. Features includes:
 
 Includes syntax highlight, including namespaces, constant variables and more.
 
-![Statement List syntax highlights example](https://github.com/nikoincc/vscode-stl/blob/main/images/show.gif)
+![Statement List syntax highlights example](https://github.com/Warpv/vscode-stl/blob/main/images/show.gif)
+![Statement List syntax highlights example](images/show.gif)
 
 ## Roadmap
 - add start script to inisialize project
@@ -32,3 +33,6 @@ Includes syntax highlight, including namespaces, constant variables and more.
 - Restructured code
 - Changed Hilighting
 
+### 1.2.3
+
+- Added Space formater

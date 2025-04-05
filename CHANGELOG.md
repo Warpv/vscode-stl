@@ -2,8 +2,17 @@
 
 All notable changes to the "vscode-stl" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased]
+### 1.1.0
 
-- Initial release
+- fix syntax highlight
+- fix snippies
+
+### 1.2.1
+
+- Restructured code
+- Changed Hilighting
+
+### 1.2.3
+
+- Added Space formater

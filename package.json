@@ -2,8 +2,10 @@
   "name": "vscode-stl",
   "displayName": "vscode-stl",
   "description": "STL snippies and highlight",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "publisher": "NIKOinc",
+  "icon": "images/icon.png",
+  "main": "./extension.js",
   "engines": {
     "vscode": "^1.98.0"
   },
@@ -11,8 +13,8 @@
     "Programming Languages"
   ],
   "repository": {
-      "type": "git",
-      "url": "https://github.com/Warpv/vscode-stl.git"
+    "type": "git",
+    "url": "https://github.com/Warpv/vscode-stl.git"
   },
   "keywords": [
     "STL",
@@ -24,13 +26,25 @@
     "languages": [{
       "id": "stl",
       "aliases": ["Statement List", "stl"],
-      "extensions": [".stl .awl .s .STL .AWL .S"],
+      "extensions": [".stl", ".awl", ".s", ".STL", ".AWL", ".S"],
       "configuration": "./language-configuration.json"
     }],
     "grammars": [{
       "language": "stl",
       "scopeName": "source.stl",
       "path": "./syntaxes/stl.tmLanguage.json"
-    }]
+    }],
+    "formatting": {
+      "defaultFormatter": {
+        "stl": "NIKOinc.vscode-stl"
+      }
+    }
+  },
+  "dependencies": {
+    "vscode": "^1.1.37"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.98.0",
+    "@types/node": "^16.11.7"
   }
 }
